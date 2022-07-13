@@ -64,15 +64,15 @@ def menu():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 quit() 
-
+        
+        
         mouse_x,mouse_y = pygame.mouse.get_pos()
         menu_bg(mouse_x,mouse_y)
 
         print(mouse_x,mouse_y)
-        print(play.get_rect().collidepoint(pygame.mouse.get_pos()))
-        if play.get_rect().collidepoint(pygame.mouse.get_pos()):
+        if mouse_x < 1056 and mouse_x > 864 and mouse_y < 590 and mouse_y > 488:
             play = pygame.image.load('New folder\play.png')
-            screen.blit(play,(884,508))
+            screen.blit(play,(700,508))
             pygame.display.update()
         else:
             play2 = pygame.image.load('New folder\play2.png')
